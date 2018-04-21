@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Control my stove</title>
+    <link href="https://bootswatch.com/3/cerulean/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="jumbotron">
+        <div class="container">
+          <center><h1>Control remoto a estufa</h1></center>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container col-md-3">
+
+        <form class="form-horizontal" action="/on_off" method="get">
+          <fieldset>
+            <center><legend>Control de encendido</legend></center>
+            <div class="form-group">
+              <div class="col-md-10 col-md-offset-2">
+                <div class="radio col-md-offset-1">
+                  <label>
+                    <input type="radio" name="on_off" id="on" value="on" checked="">
+                    Prender estufa
+                  </label>
+                </div>
+                <div class="radio col-md-offset-1">
+                  <label>
+                    <input type="radio" name="on_off" id="off" value="off">
+                    Apagar estufa
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-8 col-lg-offset-3">
+                <button type="submit" class="btn btn-primary">Ejecutar</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+
+      <div class="container col-md-3 col-md-offset-1">
+
+        <form class="form-horizontal" action="/timer" method="get">
+          <fieldset>
+            <center><legend>Timer de encendido</legend></center>
+
+            <div class="form-group">
+              <label class="col-md-4 control-label">Tiempo(min):</label>
+              <div class="col-lg-8">
+                <input type="text" class="form-control" id="time" placeholder="minutos...">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-8 col-lg-offset-3">
+                <button type="submit" class="btn btn-primary">Ejecutar</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+
+      <div class="container col-md-3 col-md-offset-1">
+
+        <form class="form-horizontal" action="/regulate" method="get">
+          <fieldset>
+            <center><legend>Regular flama</legend></center>
+
+            <div class="form-group">
+              <label for="select" class="col-md-4 control-label">Intensidad</label>
+              <div class="col-md-8">
+                <select class="form-control" name="">
+                  <option value="20">20 %</option>
+                  <option value="40">40 %</option>
+                  <option value="60">60 %</option>
+                  <option value="80">80 %</option>
+                  <option value="100">100 %</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-8 col-lg-offset-3">
+                <button type="submit" class="btn btn-primary">Ejecutar</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+      </div>
+    </div>
+
+    <br><br>
+
+    <div class="container">
+
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Detector de fugas de gas</h3>
+        </div>
+        <div class="panel-body">
+          Todo bien ...
+        </div>
+      </div>
+
+    </div>
+
+    <div class="container">
+
+      <div class="panel panel-danger">
+        <div class="panel-heading">
+          <h3 class="panel-title">Detector de temperatura</h3>
+        </div>
+        <div class="panel-body">
+          Todo bien ...
+        </div>
+      </div>
+
+    </div>
+
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"></script>
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+  </body>
+</html>
